@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body, #main{
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+::placeholder{
+    color: #fff;
+    opacity: 0.7;
+}
+
+
+/* Chèn header vô ròi xoá cái header bên dưới nha */
+#header{
+    height: 60px;
+    background-color: #ccc;
+    text-align: center;
+    color: red;
+}
+
+
+#Tuyen-dung{
+    width: 100%;
+    height: 732px;
+}
+
+#Tuyen-dung i{
+    font-size: 160px;
+    display: block;
+    padding: 30px;
+}
+
+.Tai-xe{
+    background-color: purple;
+    color: yellowgreen;
+    opacity: 0.8;
+}
+.Soat-ve{
+    background-color: #0033FF;
+    color: orange;
+    opacity: 0.7;
+}
+.Tai-xe:hover, .Soat-ve:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+.Tai-xe, .Soat-ve{
+    width: 50%;
+    float: left;
+    text-align: center;
+    height: 100%;
+    padding: 150px 50px;
+}
+
+.Detail{
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.tuyen-dung-modal{
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: ShowModal ease 0.6s;
+}
+.tuyen-dung-modal.tai-xe.open{
+    display: flex;
+}
+.tuyen-dung-modal.soat-ve.open{
+    display: flex;
+}
+.tuyen-dung-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px 20px;
+    font-size: 25px;
+    color: #fff;
+}
+.tuyen-dung-close:hover{
+    color: #ff1101;
+    cursor: pointer;
+}
+
+.tuyen-dung-modal-container{
+    width: 800px;
+    height: 500px;
+    position: relative;
+}
+.tuyen-dung-modal-container.container-tai-xe{
+    background-image: url(/assets/img/backgroundform.png);
+}
+.tuyen-dung-modal-container.container-soat-ve{
+    background-image: url(/assets/img/background-xanh-duong-18.jpg);
+}
+
+.tuyen-dung-modal-header{
+    width: 40%;
+    height: 100%;
+    float: left;
+    color: #FF3399;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    padding: 15px;
+}
+.header-tai-xe{
+    background: url(/assets/img/tai-xe.png) left center no-repeat;
+}
+.header-soat-ve{
+    background: url(/assets/img/soat-ve.svg) no-repeat left center /cover;
+    height: 80%;
+    margin: 50px -14px 50px 14px;
+}
+.tuyen-dung-modal-header i{
+    font-size: 150px;
+    padding-bottom: 30px;
+}
+.tuyen-dung-modal-header .slogan{
+    font-size: 20px;
+}
+
+.tuyen-dung-modal-body{
+    width: 60%;
+    height: 100%;
+    float: left;
+    padding: 15px 50px;
+    line-height: 40px;
+}
+.tuyen-dung-modal-body input{
+    padding-left: 3px;
+    margin-left: 5px;
+    width: 100%;
+    height: 30px;
+    border-style: none;
+    color: #ffffff;
+    border-radius: 8px;
+    font-style: italic;
+}
+.tuyen-dung-modal-body.body-tai-xe input{
+    background-color: #00786c; 
+}
+.tuyen-dung-modal-body.body-soat-ve input{
+    background-color: #0033FF;
+}
+
+th.tuyen-dung-gui:hover {
+    opacity: 0.7;
+    color: #ffee00f0;
+    cursor: pointer;
+}
+th.tuyen-dung-gui.SendTaixe {
+    background-color: #007556;
+}
+th.tuyen-dung-gui.SendSoatve {
+    background-color: #007556;
+}
+
+@keyframes ShowModal{
+    from{
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes HideModal{
+    from{
+
+    }
+    to {
+
+    }
+}

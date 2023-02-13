@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style-tuyen-dung.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.3.0-web/css/all.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">Chèn header vào đây</div>
+        <div id="Tuyen-dung">
+            <div class="Tai-xe">
+                <div class="icon-tuyen-dung"><i class="fa-solid fa-bus"></i></div>
+                <div  class="Detail">Đăng kí vị trí tài xế</div>
+            </div>
+    
+            <div class="Soat-ve">
+                <div class="icon-tuyen-dung"><i class="fa-solid fa-ticket"></i></div>
+                <div  class="Detail">Đăng kí vị trí soát vé</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tuyen-dung-modal tai-xe">
+        
+        <div class="tuyen-dung-modal-container container-tai-xe">
+            <div class="tuyen-dung-close close-tai-xe"><i class="fa-solid fa-xmark"></i></div>
+            <header class="tuyen-dung-modal-header header-tai-xe">
+            </header>
+            <table class="tuyen-dung-modal-body body-tai-xe">
+                <th class="title" colspan="2" style="padding-bottom: 10px; font-size: 20px;">GIỚI THIỆU BẢN THÂN</th>
+                <tr>
+                    <td>Tên:</td>
+                    <td><input type="text" class="input-ten" placeholder="Nguyễn Văn A."></td>
+                </tr>
+                <tr>
+                    <td>Năm sinh: </td>
+                    <td><input type="month" class="input-nam-sinh"></td>
+                </tr>
+                <tr>
+                    <td>Bằng cấp: </td>
+                    <td><input type="text" class="input-trinh-do" placeholder="Liệt kê các bằng lái bạn có." ></td>
+                </tr>
+                <tr>
+                    <td>Kinh nghiệm: </td>
+                    <td><input type="text" class="input-kinh-nghiem" placeholder="Hãy cho biết kinh nghiệm của bạn."></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="email" class="input-email" placeholder="abcxyz@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại: </td>
+                    <td><input type="text" class="input-phone" placeholder="0xxxxxxxxx"></td>
+                </tr>
+                <tr>
+                    <th colspan="2" class="tuyen-dung-gui SendTaixe">Gửi</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+<!--  -->
+    <div class="tuyen-dung-modal soat-ve">
+        
+        <div class="tuyen-dung-modal-container container-soat-ve">
+            <div class="tuyen-dung-close close-soat-ve"><i class="fa-solid fa-xmark"></i></div>
+            <header class="tuyen-dung-modal-header header-soat-ve">
+            </header>
+            <table class="tuyen-dung-modal-body body-soat-ve">
+                <th class="title" colspan="2" style="padding-bottom: 10px; font-size: 20px;">GIỚI THIỆU BẢN THÂN</th>
+                <tr>
+                    <td>Tên:</td>
+                    <td><input type="text" class="input-ten" placeholder="Nguyễn Văn A."></td>
+                </tr>
+                <tr>
+                    <td>Năm sinh: </td>
+                    <td><input type="month" class="input-nam-sinh"></td>
+                </tr>
+                <tr>
+                    <td>Trình dộ: </td>
+                    <td><input type="text" class="input-trinh-do" placeholder="12/12, cao đẳng, đại học, ..." ></td>
+                </tr>
+                <tr>
+                    <td>Kinh nghiệm: </td>
+                    <td><input type="text" class="input-kinh-nghiem" placeholder="Hãy cho biết kinh nghiệm của bạn."></td>
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="email" class="input-email" placeholder="abcxyz@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại: </td>
+                    <td><input type="text" class="input-phone" placeholder="0xxxxxxxxx"></td>
+                </tr>
+                <tr>
+                    <th colspan="2" class="tuyen-dung-gui SendSoatve">Gửi</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+<!--  -->
+
+
+
+
+    <script>
+        const Taixe = document.querySelector('.Tai-xe')
+        const Soatve = document.querySelector('.Soat-ve')
+        const TuyendungModalTaixe = document.querySelector('.tuyen-dung-modal.tai-xe')
+        const TuyendungModalSoatve = document.querySelector('.tuyen-dung-modal.soat-ve')
+        const CloseModalTaixe = document.querySelector('.tuyen-dung-close.close-tai-xe')
+        const CloseModalSoatve = document.querySelector('.tuyen-dung-close.close-soat-ve')
+        const SendTaixe = document.querySelector('.SendTaixe')
+        const SendSoatve = document.querySelector('.SendSoatve')
+
+        function ShowModalTuyendungTaixe(){
+            TuyendungModalTaixe.classList.add('open')
+        }
+        function HideModalTuyendungTaixe(){
+            TuyendungModalTaixe.classList.remove('open')
+        }
+        function ShowModalTuyendungSoatve(){
+            TuyendungModalSoatve.classList.add('open')
+        }
+        function HideModalTuyendungSoatve(){
+            TuyendungModalSoatve.classList.remove('open')
+        }
+        function Thongbaotaixe(){
+            TuyendungModalTaixe.classList.remove('open')
+            alert('Cảm ơn bạn đã đăng kí vị trí tài xế. Chúng tôi sẽ liên lạc với bạn sớm nhất có thể.')
+        }
+        function Thongbaosoatve(){
+            TuyendungModalSoatve.classList.remove('open')
+            alert('Cảm ơn bạn đã đăng kí vị trí soát vé. Chúng tôi sẽ liên lạc với bạn sớm nhất có thể.')
+        }
+
+        SendTaixe.addEventListener('click', Thongbaotaixe)
+        SendSoatve.addEventListener('click', Thongbaosoatve)
+        Taixe.addEventListener('click', ShowModalTuyendungTaixe)
+        Soatve.addEventListener('click', ShowModalTuyendungSoatve)
+        CloseModalTaixe.addEventListener('click', HideModalTuyendungTaixe)
+        CloseModalSoatve.addEventListener('click', HideModalTuyendungSoatve)
+    </script>
+</body>
+</html>
